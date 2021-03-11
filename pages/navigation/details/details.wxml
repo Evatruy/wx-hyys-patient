@@ -1,0 +1,11 @@
+<!--pages/navigation/details/details.wxml-->
+<scroll-view scroll-y>
+  <scroll-view scroll-x class='image-list'>
+      <image wx:for="{{items.imgArr}}" wx:key="id" src='{{host}}{{item.img_url}}'></image>
+  </scroll-view>
+  <view class='title text_overflow'>{{items.name}}</view>
+  <view class='view_title'>药品介绍</view>
+  <view class='view-content'>
+    <rich-text nodes='{{items.content}}'></rich-text>
+  </view>
+</scroll-view>

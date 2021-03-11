@@ -1,0 +1,106 @@
+/* pages/login/login.wxss */
+page{
+  font-size: 30rpx;
+  color: #333;
+}
+.login-top{
+  display: flex;
+  align-items: center;
+  padding: 30rpx 40rpx 30rpx 30rpx;
+  font-size: 28rpx;
+  color: #666;
+
+}
+.login-top>text{
+  flex: 1
+}
+.wx_img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 30rpx;
+}
+.view_li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #F0F0F0;
+  padding: 40rpx 0rpx;
+}
+.view_li>input::placeholder{
+  color: #999
+}
+.view_li>text{
+  padding-right: 30rpx;
+}
+.view_li>input{
+  flex: 1;
+  text-align: right;
+}
+.login-center{
+  padding: 30rpx;
+}
+.view_li_last{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #F0F0F0;
+  padding: 40rpx 0rpx;
+}
+.view_li_last>view{
+  display: flex;
+  align-items: center;
+}
+.view_li_last>view>input{
+  flex: 1;
+  margin-left: 50rpx;
+}
+.login-bottom{
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.login-bottom>view{
+  text-align: center;
+  padding-bottom: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.radio{
+  margin-right: 30rpx;
+}
+radio{
+  transform:scale(0.7);
+}
+checkbox{
+  transform:scale(0.65);
+  vertical-align: middle;
+}
+.code_num{
+  color: #6A7BC7;
+  display: inline-block;
+  width: 200rpx;
+  text-align: center;
+}
+.last-btn::after{
+  border: none
+}
+.last-btn{
+  background: #6A7BC7;
+  color: #fff;
+  border-radius: 20px;
+}
+.text-word{
+  color: #999;
+  font-size: 24rpx;
+}
+.text-xieyi{
+  color: #6A7BC7; 
+  font-size: 24rpx;
+}
+.placeholder{
+  color: rgb(180, 179, 179);
+}

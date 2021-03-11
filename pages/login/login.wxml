@@ -1,0 +1,45 @@
+<!--pages/login/login.wxml-->
+<view class='login-top'>
+  <view class="wx_img">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <text>请完善您的个人资料，个人资料只用于药师为您提供服务使用，请您放心填写</text>
+</view>
+<view class='login-center'>
+  <view class="view_li">
+    <text>姓名</text>
+    <input type='text' bindinput="nameInput" placeholder-class='placeholder' auto-focus placeholder="请输入您的姓名" />
+  </view>
+  <view class="view_li">
+    <text>性别</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for="{{items}}" wx:key="index">
+        <radio color='#6A7BC7' value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="view_li">
+    <text>年龄</text>
+    <input type='number' placeholder-class='placeholder' bindinput="ageInput" maxlength="3" placeholder="请输入您的年龄" />
+  </view>
+  <view class="view_li">
+    <text>手机号</text>
+    <input type='number' placeholder-class='placeholder' bindinput="phoneInput" maxlength="11" placeholder="请输入您的手机号" />
+  </view>
+  <view class="view_li_last">
+    <view>
+      <text>验证码</text>
+      <input type='number' placeholder-class='placeholder' bindinput="codeInput" maxlength="6" placeholder="请输入验证码" />
+    </view>
+    <text class="code_num" bindtap="bindButtonTap" wx:if="{{showText}}">{{textAll}}</text>
+    <text wx:else="{{showText}}" class="code_num">{{text}}</text>
+  </view>
+</view>
+<view class='login-bottom'>
+  <view> 
+    <text class="text-word">点击下一步，即表示已阅读并同意</text>
+    <text class='text-xieyi' bindtap='loginWord'>《用户注册协议》</text>
+  </view>
+  <button class='btn' bindtap='onSubmit'>下一步</button>
+</view>
+

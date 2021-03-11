@@ -1,0 +1,106 @@
+/* pages/navigation/drugstoreDetails/drugstoreDetails.wxss */
+.view-all{
+  padding: 0rpx 30rpx;
+}
+.detail-top{
+  padding: 55rpx 0rpx 35rpx 0rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+.title{
+  font-size: 34rpx;
+  padding-bottom: 5rpx;
+}
+.msg{
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 28rpx;
+  padding-top: 26rpx;
+}
+.msg image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.msg text{
+  flex: 1;
+  padding-left: 14rpx;
+}
+.content{
+  padding: 30rpx 0rpx 60rpx 0rpx;
+  word-break: break-all; /* 追加这一行代码 */
+}
+.list-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-title>text{
+  display: flex;
+  align-items: center;
+  font-size: 38rpx;
+  font-weight: bold;
+}
+.list-title>text::before{
+  content: '';
+  display: inline-block;
+  width: 10rpx;
+  height: 38rpx;
+  background: #6A7BC7;
+  margin-right: 20rpx;
+}
+.view-ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 130rpx;
+}
+.view-li{
+  margin-top: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.view-li image{
+  width: 330rpx;
+  height:220rpx;
+}
+.view-li view{
+  padding-top: 24rpx;
+  color: #374AA0;
+  max-width: 300rpx;
+  text-align: center;
+}
+.last-btn{
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  left: 0;
+  right: 0;
+}
+.last-btn button{
+  width: 50%;
+  color: #fff;
+  border-radius: 0rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.last-btn button::after{
+  border: none;
+}
+.last-btn button:nth-child(1){
+  background: #A9B7F4;
+}
+.last-btn button:nth-child(2){
+  background: #6A7BC7;
+}
+.more{
+  display: flex;
+  align-items: center;
+}
+.more image{
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 10rpx;
+}

@@ -1,0 +1,28 @@
+/* pages/service/reply/reply.wxss */
+.view-body{
+  padding: 0rpx 30rpx;
+  color: #666;
+}
+.msg{
+  word-break: break-all;
+  font-size: 28rpx;
+  padding-top: 60rpx;
+  color: #6A7BC7;
+}
+.phoneNum{
+  padding-bottom: 60rpx;
+  font-size: 28rpx;
+}
+textarea {
+  margin-top: 60rpx;
+  background: #FAFAFA;
+  height: 240rpx;
+  width: 91%;
+  padding: 30rpx;
+}
+.btn{
+  position: absolute;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}

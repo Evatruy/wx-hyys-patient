@@ -1,0 +1,62 @@
+<!--pages/mine/knowledge/knowledge.wxml-->
+<!-- 血压 -->
+<scroll-view scroll-y>
+  <view class='scroll-view'>
+    <!-- 血压 -->
+    <view class='press' wx:if='{{showType==0}}'>
+      <view class='title'>基本知识</view>
+      <text class='text-msg'>人体的循环器官包括心脏，血管和淋巴系统，它们之间相互连接，构成一个基本上封闭的“管道系统”，正常的心脏是一个强有力的肌肉器官，就像 一个水泵，它日夜不停地,有节律地搏动着。心脏一张一缩，使血液在循环器官内川流不息。血液在血管内流动时，无论心脏收缩或舒张，都对血管壁产生一定的压力，当心脏收缩时，大动脉里的压力最高，这时的血液称为“高压”，左心室舒张时，大动脉里的压力最低，故称为"低压”；平时我们所说的“血压”实际上是指上臂肱幼脉，即胳膊窝血管的血压测定，是大动脉血压的间接测定。通常我们测血压右侧与左侧的血压不一样，最高可相差10毫米汞柱，最低相差不到5毫米汞柱。正常的血压是血液循环流动的前提，血压在多种因素调节下保持正常，从而提供各组织器官以足够的血量，以维持正常的新陈代谢。血压过低过高(低血压、高血压)都会造成严重后果，血压消失是死亡的前兆，这都说明血压有极其重要的生物学意义!</text>
+      <view class='title'>参考值</view>
+      <view class='title-view'>
+        <text decode='true'>理想血压: 收缩压&lt;120 mmHg，舒张压&lt;80mmHg</text>
+        <text decode='true'>正常血压:90mmHg&lt;=收缩压&lt;120mmHg，60mmHg&lt;=舒张压&lt;80mmHg</text>
+        <text>血压正常高限或高血压前期:收缩压在120~130mmHg和/或舒张压在60~80mmHg</text>
+        <text>高血压: 动脉血压超过正常值的异常升高</text>
+        <text>收缩压130mmHg 或舒张压90mmHg</text>
+        <text>低血压:动脉血压低于正常值的异常降低</text>
+        <text>收缩压90mmHg或舒张压60mmHg</text>
+        <text>临界高血压(临床观测经验):收缩压在140~160mmHg(18.6~21.3kPa）舒张压在90~95mmHg(12.0~12.6kPa)</text>
+      </view>
+    </view>
+    <!-- 血糖 -->
+    <view class='press' wx:elif='{{showType==1}}'>
+      <view class='title'>基本知识</view>
+      <text class='text-msg'>血液中的糖份称为血糖，绝大多数情况下都是葡萄糖 (英文简写Glu)体内各组织细胞活动所需的能量大部分来自葡萄糖，所以血糖必须保持一定的水平才能维持体内各器官和组织的需要，正常人 在空腹血糖浓度为3.61~6.11mmol/L。空腹血糖浓度超过7.0mmol/L称为高血糖，血糖浓度低于3.61mmol/L称为低血糖，我们拿到的血液生化检查报告中一般写着葡萄糖，或者Glu。</text>
+      <view class='title'>参考值</view>
+      <view class='title-view' >
+        <text decode='true'>空腹血糖(fasting blood glucose,FBG)正常值</text>
+        <text>1)一般空腹全血血糖为3.9~6.1毫摩玉/升(70-110皂克/分升)，血浆血糖为3.9~6.9毫摩尔/升(70~125毫克/分升)</text>
+        <text>2)空腹全血血糖6.7亳摩尔/升(120毫克/分升)血浆血糖>7.8毫摩尔/升(140亭克/分升)，2次重复测定可诊断为糖尿病!</text>
+        <text>3)当空腹全血血糖在5.6毫摩尔/升(100毫克/分升)以上，血浆血糖在6.4毫摩尔/升(115毫克/分升)以上，应做糖耐量试验。</text>
+        <text>4)当空腹全血血糖超过11.1毫摩尔/升(200部克/分升)时，表示胰岛素分泌极少或缺乏。 因此，空腹血糖显著增高时，不必进行其它检查，即可诊断为糖尿病。</text>
+        <text class='text-padding'>餐后血糖正常值</text>
+        <text>1)餐后1小时:血糖6.7-9.4毫摩/升，最多也不超过11.1mmol/L(200mg/dl)</text>
+        <text>2)餐后2小时:血糖7.8毫摩/升</text>
+        <text>3)餐后3小时: 第三小时后恢复正常，各次尿糖均为阴性</text>
+        <text class='text-padding'>孕妇血糖正常值</text>
+        <text>1)孕妇空腹不超过5.1mmol/L</text>
+        <text>2)孕妇餐后1小时:餐后1小时血糖值 殷用于检测孕妇糖尿病检测中，权威数据表明孕妇餐后1小时不得超过10.0mmol/L才是血糖的正常水平；</text>
+        <text>3)孕妇餐后2小时:餐后正常血糖值 股规定不得超过11.1mmol/L，而孕妇餐后2小时正常血糖值规定不得超过8.5mmOI/L</text>
+        <text class='text-padding'>通过对血糖正常值的检测，了解血糖标准值有助于您提高做好糖尿病防治。</text>
+      </view>
+    </view>
+    <!-- BMI -->
+    <view class='press' wx:elif='{{showType==2}}'>
+      <view class='title'>基本知识</view>
+      <text class='text-msg'>BMI指数(即身体质量指数，简称体质指数又称体重，英文为Body MassIndex，简称BMI).是用体重公斤数除以身高米数平方得出的数字，是目前国际上常用的衡量人体胖痩程度以及是否健康的一个标准,主要用于统计用途，当我们需要比较及分析 -个人的体重对于不同高度的人所带来的健康影响时，BMI值是 个中立而可靠的指标</text>
+      <view class='title'>参考值</view>
+      <view class='title-view'>
+        <text decode='true'>偏瘦&lt;=18.4</text>
+        <text>正常18.5~23.9</text>
+        <text decode='true'>过重24.0~27.9</text>
+        <text decode='true'>肥胖>=28.0</text>
+      </view>
+    </view>
+    <!-- 心率 -->
+    <view class='press' wx:else='{{showType==3}}'>
+      <view class='title'>基本知识</view>
+      <text class='text-msg'>心率是指正常人安静、清醒状态下每分钟心跳的次数，也叫安静心率，一般为 60～100 次/分，可因年龄 、性别或其他生理因素产生个体差异。一般来说，老年人比年轻人慢，女性比同龄男性快，年龄越小，心 率越快，小于3岁的儿童多在100次/分，至10岁以后即可大致保持成人的心率水平，这些都是正常的生理现象。</text>
+    </view>
+  </view>
+</scroll-view>
+

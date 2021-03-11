@@ -1,0 +1,93 @@
+<!--pages/find/index.wxml-->
+<view class="page">
+  <view class='search'>
+    <view class='searchItem'>            
+      <input placeholder='请输入患者姓名、备注信息查找'></input>
+      <image src='../../images/icon-search.png' />
+    </view>
+    <image src='../../images/icon-message.png' />
+  </view>
+  <view>
+    <swiper class="swiper-view" autoplay="true" indicator-color="#b2ffffff" indicator-active-color="#ffffff">
+      <swiper-item>
+        <image src="../../images/swiper-simple.png"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/swiper-simple.png"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="../../images/swiper-simple.png"/>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="section">
+    <view class="section_func">
+      <image src="../../images/icon-my-doctor.png"/>
+      <text>我的医生</text>
+    </view>
+    <view class="section_func">
+      <image src="../../images/icon-szmf.png"/>
+      <text>首诊免费</text>
+    </view>
+    <view class="section_func">
+      <image src="../../images/icon-ayyz.png"/>
+      <text>按医院找</text>
+    </view>
+    <view class="section_func">
+      <image src="../../images/icon-axkz.png"/>
+      <text>按学科找</text>
+    </view>
+  </view>
+  <view class="divider"/>
+  <view class="func_title">
+    <text class="title_left">专家团队</text>
+    <view class="func_more">
+      <text>更多</text>
+      <image src="../../images/icon-arrow-green.png"/>
+    </view>
+  </view>
+  <view class="team-view">
+    <image wx:for="{{teamData}}" data-item="{{item}}" src="{{item}}"/>
+  </view>
+  <view class="func_title2">
+    <text class="title_left">热门科室</text>
+    <view class="func_more">
+      <text>更多</text>
+      <image src="../../images/icon-arrow-green.png"/>
+    </view>
+  </view>
+  <view class="department-view">
+    <view class="depart-v" wx:for="{{departData}}" data-item="{{item}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}"/>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="func_title2 func_title3">
+    <text class="title_left">常见病症</text>    
+  </view>
+  <view class="disease-view">
+    <view class="disease-item" wx:for="{{diseaseData}}" data-item="item" wx:key="{{index}}">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <view class="func_title2 func_title4">
+    <text class="title_left">科普推荐</text>
+    <view class="func_more">
+      <text>更多</text>
+      <image src="../../images/icon-arrow-green.png"/>
+    </view>
+  </view>
+  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="{{index}}">
+    <image src="{{item.preview}}"/>
+    <view class="news-right">
+      <text>{{item.title}}</text>
+      <view class="time-view">
+        <view>
+          <image src="../../images/icon-view.png"/>
+          <text>{{item.views}}</text>
+        </view>
+        <text>{{item.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

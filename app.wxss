@@ -1,0 +1,61 @@
+/**app.wxss**/
+page{
+  font-size: 30rpx;
+  font-family: "MicrosoftYaHei";
+  color: #333;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.btn{
+    background-color: #6A7BC7;
+    color:#fff;
+    font-size: 32rpx;
+    line-height: 80rpx;
+}
+.btn::after{
+  border: none;
+}
+.text_overflow{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all; /* 追加这一行代码 */
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.title_name{
+  color: #333;
+  font-size: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.title_name::before{
+  content: "";
+  display: inline-block;
+  width: 10rpx;
+  height: 30rpx;
+  background: #6A7BC7;
+  margin-right: 20rpx;
+}
+.none-msg-last{
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}
+.placeholder{
+  color: rgb(180, 179, 179);
+}

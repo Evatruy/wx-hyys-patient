@@ -1,0 +1,34 @@
+<!--pages/service/chat/chat.wxml-->
+<view class='title' wx:if='{{status==5}}'>咨询中</view>
+<view class='title' wx:else>已结束</view>
+<scroll-view scroll-y class='scroll-content'>
+  <view wx:for='{{items}}' wx:key='id'>
+  <!-- 患者提问 -->
+    <view class='patient' wx:if='{{item.type==5}}'>
+      <view class='patient-text'>
+        <view>{{item.content}}</view>
+        <text>{{item.created_at}}</text>
+      </view>
+      <view class='patient-img'>
+        <block wx:if='{{headimgurl==null}}'>
+          <open-data type="userAvatarUrl"></open-data>
+        </block> 
+        <image wx:else src='{{headimgurl}}'></image> 
+      </view>
+    </view>
+  <!-- 药师回复 -->
+    <view class='doctor' wx:elif='{{item.type==10}}'>
+      <view class='doctor-img'>
+        <image src='/images/doctor-img.png'></image>
+      </view>
+      <view class='doctor-text'>
+        <view>{{item.content}}</view>
+        <text>{{item.created_at}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='last-btn' hidden='{{status==10}}'>
+    <button bindtap='end'>结束咨询</button>
+    <button bindtap='linkReply'>回复</button>
+</view>

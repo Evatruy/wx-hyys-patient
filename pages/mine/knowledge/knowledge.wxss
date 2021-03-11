@@ -1,0 +1,27 @@
+/* pages/mine/knowledge/knowledge.wxss */
+.scroll-view{
+  padding: 30rpx;
+}
+.title{
+  color: #6A7BC7;
+  padding: 30rpx 0rpx 20rpx 0rpx;
+}
+.text-msg{
+  word-break: break-all;
+  font-size: 28rpx;
+  color: #666;
+  display: block;
+  text-align:justify;
+  text-justify:inter-ideograph;
+}
+.title-view{
+  word-break: break-all;
+  font-size: 28rpx;
+  color: #666;
+}
+.title-view>text{
+  display: block
+}
+.text-padding{
+  padding-top: 30rpx;
+}

@@ -1,0 +1,14 @@
+<!--pages/mine/myMsg/myMsg.wxml-->
+<scroll-view scroll-y>
+  <view class='view-list' wx:for='{{items}}' wx:key='{{item.index}}'>
+    <view class='list-top'>
+      <text>{{item.title}}</text>
+      <text>{{item.dt}}</text>
+    </view>
+    <view class='list-center'>您的问题：{{item.question}}</view>
+    <view class='list-bottom'>客服回复：{{item.content}}</view>
+  </view>
+  <view class='none-msg' wx:if='{{more}}'>加载更多.....</view>
+  <view class='none-msg' wx:if='{{noMore}}'>没有更多数据</view>
+</scroll-view>
+<view wx:if='{{showMsg}}' class='none-msg'>— 暂无数据 —</view>

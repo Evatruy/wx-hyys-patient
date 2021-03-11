@@ -1,0 +1,33 @@
+<!--pages/mine/index/index.wxml-->
+<view class='header'>
+  <view class='header-right'>
+    <image src='/images/mine-msg.png' bindtap='linkMsg'></image>
+    <text class='header-num' wx:if='{{messageCount!=0}}'/>
+  </view>
+  <view class='header-center'>
+    <block wx:if="{{headimgurl=='' || headimgurl==null}}">
+      <open-data type="userAvatarUrl" class="avatar-view"></open-data>
+    </block> 
+    <image wx:else src='{{headimgurl}}'></image>
+    <block wx:if="{{name=='' || name == null}}">
+      <open-data type="userNickName"></open-data>
+    </block>
+    <text wx:else>{{name}}</text>
+  </view>
+  <view class="section-view">
+    <view class="section">
+      <image src="/images/mine-zxdd.png"/>
+      <text>咨询订单</text>
+    </view>
+    <view class="section">
+      <image src="/images/mine-spdd.png"/>
+      <text>商品订单</text>
+    </view>
+  </view>
+  <view class="func-view">
+    <view class="func-item" wx:for="{{funcData}}" data-item="{{item}}" wx:key="{{index}}">
+      <image src="{{item.imgUrl}}"/>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>

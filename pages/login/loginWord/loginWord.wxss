@@ -1,0 +1,15 @@
+/* pages/login/loginWord/loginWord.wxss */
+.view-msg{
+  padding: 30rpx;
+}
+.list-title{
+  padding-top: 30rpx;
+
+}
+.list-msg{
+  word-break: break-all;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+  text-align:justify;
+  text-justify:inter-ideograph;
+}

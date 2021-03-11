@@ -1,0 +1,37 @@
+/* pages/mine/addRecord/addRecord.wxss */
+.pressure{
+  padding: 0rpx 30rpx;
+}
+.view-li{
+  display: flex;
+  align-items: center;
+  border-bottom: 2rpx solid #f0f0f0;
+  padding: 40rpx 0rpx;
+}
+.view-li input{
+  flex: 1;
+  padding-right: 30rpx;
+  text-align: right;
+}
+.view-li-time{
+  justify-content: space-between;
+}
+.btn{
+  position: fixed;
+  bottom: 30rpx;
+  left: 30rpx;
+  right: 30rpx;
+}
+.picker{
+  display: flex;
+  align-items: center;
+  color: #6A7BC7;
+}
+.picker image{
+  width: 16rpx;
+  height: 28rpx;
+  margin-left: 12rpx;
+}
+.text-color{
+  color:#6A7BC7; 
+}

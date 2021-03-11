@@ -1,0 +1,153 @@
+/* pages/mine/bloodSugar/bloodSugar.wxss */
+.scroll-view{
+  padding: 40rpx 30rpx 0rpx 30rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40rpx;
+}
+.title>text:nth-child(1){
+  display: flex;
+  align-items: center; 
+}
+.title>text:nth-child(1)::before{
+  width: 10rpx;
+  height: 30rpx;
+  content: '';
+  background: #6A7BC7;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 18rpx;
+}
+.title>text:nth-child(2){
+  color: #6A7BC7;
+  border: 2rpx solid #6A7BC7;
+  border-radius: 5rpx;
+  padding: 6rpx 13rpx;
+  font-size: 24rpx;
+}
+.content{
+  padding-bottom: 60rpx;
+}
+canvas{
+  width: 100%;
+  height: 200px;
+}
+.tips{
+  color: #666;
+  font-size: 24rpx;
+  padding-top: 25rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.scale{
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  background: #4BB24B;
+  border-radius: 50%;
+  margin-right: 10rpx;
+  position: relative;
+  top: 4rpx;
+}
+.title-num{
+  color: #6A7BC7;
+  display: flex;
+  align-items: center;
+}
+.title-num image{
+  width: 18rpx;
+  height: 30rpx;
+  margin-left: 12rpx;
+}
+.view-table{
+  background: #E5EAFF;
+  height: 60rpx;
+  color: #374AA0;
+  display: flex;
+  align-items: center;
+  
+}
+.view-table text{
+  width: 33.33%;
+  text-align: center;
+}
+.last-bottom{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  background: #fff;
+  padding-top: 20rpx;
+}
+.btn{
+  width: 90%;
+  margin-bottom: 30rpx;
+}
+
+.touch-item {
+  display: flex;
+  height: 130rpx;
+  border-bottom:2rpx solid #DDDDDD;
+  width: 100%;
+  overflow: hidden;
+  color: #666666;
+}
+.content-li{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+}
+.content-li text{
+  display: inline-block;
+  text-align: center;
+  width: 33.33%;
+}
+.del {
+  background-color: #E32425;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.touch-move-active .content-li,.touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.view-tbody{
+  padding-bottom: 140rpx;
+}
+.color-red{
+  color: #E32425
+}
+.color-green{
+  color: #4BB24B
+}
+.scale-red{
+  background: #E32425;
+}
+.scale-voliet{
+  background: #a946e3;
+}
+.bg-view{
+  background: #D4DCFF;
+  height: 300rpx;
+  text-align: center;
+  line-height: 300rpx;
+  font-size: 60rpx;
+  color: rgb(197, 195, 195);
+}

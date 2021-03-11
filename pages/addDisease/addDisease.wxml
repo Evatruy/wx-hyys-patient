@@ -1,0 +1,50 @@
+<!--pages/addDisease/addDisease.wxml-->
+  <view class='content'>
+    <view class='search'>
+      <view>
+        <input placeholder='请输入病症名称' bindinput='inputVal' value='{{inputMsg}}'></input>
+        <image class='search_logo' bindtap='inputFouce' src='/images/consultation_logo.png'></image>
+      </view>  
+    </view>
+    <view style='{{disB}}'>
+      <view class="tishi" >
+        <view>温馨提示：</view>
+        <text>请认真填写您的病症，以方便医生更清晰的找到您，祝您早日康复！</text>
+      </view>
+      <!-- <view class='fankui'></view> -->
+      <scroll-view scroll-y class='scroll-view' >
+        <checkbox-group bindchange="checkboxChange">
+          <label wx:for="{{itemsMsg}}" wx:key="{{item.id}}" class="checkbox">
+              <checkbox  value="{{item.id}}" checked="{{item.checked}}"/>
+              <text>{{item.name}}</text>
+          </label>
+          <label wx:for="{{items}}" wx:key="{{item.id}}" class="checkbox"    >
+            <checkbox  value="{{item.id}}" checked="{{item.checked}}"/>
+            <text>{{item.name}}</text>
+          </label>
+        </checkbox-group>
+      </scroll-view>
+      <view class='last-button'>
+        <button class="btn" bindtap='disease_ok'>完成</button>
+      </view>
+    </view>
+    <view class="list-add" style='{{disN}}'>
+      <view class="list-add-li" wx:for='{{itemsList}}' wx:key='{{item.id}}'>
+        <text>{{item.name}}</text>
+        <image bindtap='addDisease' data-id='{{item.id}}' data-text='{{item.name}}' src='{{imgAdd}}'></image>
+      </view>
+      </view>
+      <view style='{{dis}}' class='disease-fankui'>
+        <image src='/images/fankui.png'></image>
+        <view>没有找到病症</view>
+        <button  bindtap='modalinput' class='btn btn-fankui'>返回</button>
+      <!-- <view class="list-add-li"><text>白细胞病变</text><image src='{{imgAdd}}'></image></view>
+      <view class="list-add-li"><text>慢性白癜风</text><image src='{{imgAdd}}'></image></view>
+      <view class="list-add-li"><text>慢性白癜风</text><image src='{{imgAdd}}'></image></view>
+      <view class="list-add-li"><text>慢性白癜风</text><image src='{{imgAdd}}'></image></view> -->
+    </view>
+  </view>
+  <!-- <modal hidden="{{hiddenmodalput}}" title="反馈病症名称"  confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text'placeholder="请输入病症名称" maxlength='18' bindinput='input_btn' auto-focus/>  
+</modal>  -->
+

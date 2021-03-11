@@ -1,0 +1,32 @@
+/* pages/mine/myMsg/myMsg.wxss */
+.view-list{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #f0f0f0;
+}
+.list-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+.list-top>text:nth-child(2){
+  font-size: 24rpx;
+  color: #999;
+}
+.list-center{
+  padding-bottom: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+  word-break: break-all;
+}
+.list-bottom{
+  font-size: 28rpx;
+  color: #666;
+  word-break: break-all;
+}
+.none-msg{
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}

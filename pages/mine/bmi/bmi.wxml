@@ -1,0 +1,52 @@
+<!--pages/mine/bmi/bmi.wxml-->
+<scroll-view scroll-y>
+  <view class='scroll-view'>
+    <view class='title'>
+      <text>最近BMI指数趋势</text>  
+      <text bindtap='linkKnow'>小知识</text>
+    </view>
+    <view class="content">
+      <view wx:if='{{total==0}}' class='bg-view'>暂无数据</view>
+      <canvas wx:else canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+        <view class='tips'>
+          <text wx:if='{{bmiMsg==""}}'>（tips：点击图表查看具体信息）</text> 
+          <block wx:else>
+            <text>{{month}}</text>
+            <text>身高：{{height}} </text>
+            <text>体重：{{weight}}</text>
+            <text wx:if='{{showColor=="正常"}}'><text class='scale'></text>正常</text>
+            <text wx:elif='{{showColor=="偏重"}}'><text class='scale scale-red'></text>偏重</text>
+            <text wx:elif='{{showColor=="偏瘦"}}'><text class='scale scale-yellow'></text>偏瘦</text>
+            <text wx:else><text class='scale scale-voliet'></text>肥胖</text>
+          </block>
+        </view>
+    </view>
+    <view class='title'>
+      <text>总记录</text>  
+      <view class='title-num' bindtap='linkTotal'>
+        <text>{{total}}条</text>
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='view-table'>
+    <text>时间</text>
+    <text>体重</text>
+    <text>身高</text>
+    <text>BMI</text>
+  </view>
+  <view class='view-tbody'>
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="id">
+      <view class="content-li">
+        <text>{{item.dt}}</text>
+        <text>{{item.weight}}</text>
+        <text>{{item.height}}</text>
+        <text>{{item.result}}</text>
+      </view>
+      <view class="del" catchtap="del" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+</scroll-view>
+<view class='last-bottom'>
+    <button class='btn' bindtap='linkRecord'>+添加记录</button>
+</view>

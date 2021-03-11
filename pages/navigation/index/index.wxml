@@ -1,0 +1,21 @@
+<!--pages/navigation/index/index.wxml-->
+<scroll-view class='scroll-ul'>
+  <view class='view-li' wx:for='{{items}}' wx:key='id' data-id="{{item.id}}" bindtap='linkDetails'>
+    <view class='title'>
+      <text>{{item.name}}</text>
+      <text catchtap='linkMap' data-longitude='{{item.longitude}}' data-latitude='{{item.latitude}}' data-address='{{item.address}}'>查看路线</text>
+    </view>
+    <view class='view-msg view-one'>
+      <image src='/images/icon-phone.png'></image>
+      <text data-phone='{{item.phone}}' catchtap='phoneCall'>{{item.phone}}</text>
+    </view>
+    <view class='view-msg'>
+      <image src='/images/icon-address.png'></image>
+      <text class='text_overflow flex_last'>{{item.address}}</text>
+    </view>
+  </view>
+  <view class='none-msg' wx:if='{{showMsg}}'>
+    <view>—— 暂无数据 ——</view>
+  </view>
+</scroll-view>
+

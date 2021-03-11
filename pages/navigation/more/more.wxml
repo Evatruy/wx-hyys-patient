@@ -1,0 +1,13 @@
+<!--pages/navigation/more/more.wxml-->
+<scroll-view scroll-y >
+  <view class='view-ul'>
+    <view class='view-li' bindtap='linkDetails' wx:for="{{items}}" wx:key="id" data-id="{{item.id}}">
+      <image src='{{host}}{{item.imgSrc}}'></image>
+      <view>{{item.name}}</view>
+    </view>
+  </view>
+  <view class='none-msg' wx:if='{{showMsg}}'>
+    <view>—— 暂无数据 ——</view>
+  </view>
+</scroll-view>
+

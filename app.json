@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/find/index",
+    "pages/service/index/index",
+    "pages/mine/index/index",
+    "pages/consult/consult",
+    "pages/bootPage/bootPage",
+    "pages/login/login",
+    "pages/addDisease/addDisease",
+    "pages/mine/heartRate/heartRate",
+    "pages/mine/bmi/bmi",
+    "pages/mine/bloodSugar/bloodSugar",
+    "pages/mine/bloodPressure/bloodPressure",
+    "pages/mine/myMsg/myMsg",
+    "pages/mine/feedback/feedback",
+    "pages/mine/totalRecord/totalRecord",
+    "pages/mine/addRecord/addRecord",
+    "pages/navigation/index/index",
+    "pages/navigation/drugstoreDetails/drugstoreDetails",
+    "pages/navigation/more/more",
+    "pages/mine/knowledge/knowledge",
+    "pages/service/chat/chat",
+    "pages/service/reply/reply",
+    "pages/service/consultation/consultation",
+    "pages/navigation/details/details",
+    "pages/navigation/map/map",
+    "pages/login/loginWord/loginWord"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的线路查看路线"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "浩雅健康助手",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "black",
+    "selectedColor": "#6A7BC7",
+    "color": "#666666",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/find/index",
+        "text": "找医生",
+        "iconPath": "./images/icon-patient.png",
+        "selectedIconPath": "./images/icon-patient-bg.png"
+      },
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "咨询",
+        "iconPath": "./images/icon-consult.png",
+        "selectedIconPath": "./images/icon-consult-bg.png"
+      },
+      {
+        "pagePath": "pages/navigation/index/index",
+        "text": "科普",
+        "iconPath": "./images/icon-science.png",
+        "selectedIconPath": "./images/icon-science-bg.png"
+      },
+      {
+        "pagePath": "pages/mine/index/index",
+        "text": "我的",
+        "iconPath": "./images/icon-mine.png",
+        "selectedIconPath": "./images/icon-mine-bg.png"
+      }
+    ]
+  },
+  "plugins": {
+   
+  },
+  "sitemapLocation": "sitemap.json"
+}

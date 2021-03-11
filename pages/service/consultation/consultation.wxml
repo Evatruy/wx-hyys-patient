@@ -1,0 +1,10 @@
+<!--pages/service/consultation/consultation.wxml-->
+<view class='view-body'>
+  <view class='msg'>欢迎使用“药师咨询”服务，请填写您需要咨询的用药问题，尽可能的提供您的当前病症，当前用药名称，服药时长及相关问题，平台执业药师将为您提供1V1解答，祝您天天好心情，健康常相伴！</view>
+  <!-- <view class='phoneNum' bindtap='phoneCall' data-phone='13364044116'>热线电话：13364044116</view> -->
+  <view class='title_name'>问题描述</view>
+  <form bindsubmit="onSubmit" report-submit='true' >
+    <textarea maxlength='200' placeholder-class='placeholder'  bindinput='textMsg' auto-focus placeholder="如：因为感冒，正在使用感冒灵但没有什么效果，已经用药了3天，请问还需要继续服用该药嘛？" />
+    <button class='btn' formType="submit" >提交</button>
+  </form>
+</view>

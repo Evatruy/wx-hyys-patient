@@ -1,0 +1,90 @@
+<!--pages/mine/addRecord/addRecord.wxml-->
+<!-- 血压 -->
+<view class='pressure'  wx:if='{{showType==0}}'>
+  <view class='view-li'>
+    <view>收缩压</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputOne' auto-focus type='number'/>
+    <text class='text-color'>mmHg</text>
+  </view>
+  <view class='view-li'>
+    <view>舒张压</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputTwo' type='number'/>
+    <text class='text-color'>mmHg</text>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>测量日期</view>
+    <picker mode="date" value="{{pressDataTime}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{pressDataTime}}
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<!-- 血糖 -->
+<view class='pressure'  wx:elif='{{showType==1}}'>
+  <view class='view-li'>
+    <view>血糖值</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputSuger' auto-focus type='digit'/>
+    <text class='text-color'>mmoL/L</text>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>时间段</view>
+    <picker bindchange="bindPickerChange" value="{{index}}"  range="{{array}}">
+      <view class="picker" >
+        {{array[index]}}
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>测量日期</view>
+    <picker mode="date" value="{{pressDataTime}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{pressDataTime}}
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<!-- BMI -->
+<view class='pressure' wx:elif='{{showType==2}}'>
+  <view class='view-li'>
+    <view>身高</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputHeight' auto-focus type='number'/>
+    <text class='text-color'>cm</text>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>体重</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputWeight' type='digit'/>
+    <text class='text-color'>kg</text>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>测量日期</view>
+    <picker mode="date" value="{{pressDataTime}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{pressDataTime}}
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<!-- 心率 -->
+<view class='pressure' wx:else='{{showType==3}}'>
+  <view class='view-li'>
+    <view>心率</view>
+    <input placeholder='请输入数值' placeholder-class='placeholder'  bindinput='inputHeart' auto-focus type='number'/>
+    <text class='text-color'>次/分钟</text>
+  </view>
+  <view class='view-li view-li-time'>
+    <view>测量日期</view>
+    <picker mode="date" value="{{pressDataTime}}" bindchange="bindDateChange">
+      <view class="picker">
+        {{pressDataTime}}
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<button class='btn' bindtap='save'>保存</button>
+

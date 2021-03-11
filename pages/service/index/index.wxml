@@ -1,0 +1,6 @@
+<!--pages/service/index/index.wxml-->
+<view class="page">
+  <view class="search_v">
+    <input class="search_input" placeholder="请输入患者姓名、备注信息查找"/>
+  </view>
+</view>

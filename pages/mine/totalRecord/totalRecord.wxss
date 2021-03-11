@@ -1,0 +1,116 @@
+/* pages/mine/totalRecord/totalRecord.wxss */
+.header-top{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  height: 170rpx;
+  z-index: 1;
+}
+.content-center{
+  padding-top: 170rpx;
+}
+.title-top{
+  display: flex;
+  height: 110rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.title-top>view{
+  padding-left: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.title-top>view::before{
+  display: block;
+  content: '';
+  width: 10rpx;
+  height: 30rpx;
+  background: #6A7BC7;
+  margin-right: 18rpx;
+}
+.title-top>text{
+  padding-right: 30rpx;
+  color: #6A7BC7;
+}
+.title-table{
+  color: #374AA0;
+  background: #E5EAFF;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.title-table>text{
+  display: inline-block;
+  width: 33.33%;
+  text-align: center;
+}
+
+.touch-item {
+  display: flex;
+  height: 130rpx;
+  border-bottom:2rpx solid #DDDDDD;
+  width: 100%;
+  overflow: hidden;
+  color: #666666;
+}
+.content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+}
+.content text{
+  display: inline-block;
+  text-align: center;
+  width: 33.33%;
+}
+.del {
+  background-color: #E32425;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.touch-move-active .content,.touch-move-active .del {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.color-red{
+  color: #E32425
+}
+.color-green{
+  color: #4BB24B
+}
+.color-yellow{
+  color:#e37e46
+}
+.title-table-bmi text{
+  width: 23%;
+}
+.title-table-bmi text:nth-child(1){
+  width: 31%;
+}
+.content-bmi text{
+  width: 23%;
+}
+.content-bmi text:nth-child(1){
+  width: 31%;
+}
+.none-msg{
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 60rpx;
+}

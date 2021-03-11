@@ -1,0 +1,171 @@
+/* pages/addDisease/addDisease.wxss */
+page{
+height: 100%;
+}
+.content{
+  padding: 0rpx 30rpx;
+}
+.title{
+  text-align: center;
+  font-size: 32rpx;
+  padding-top: 50rpx;
+  padding-bottom: 40rpx;
+}
+.title text{
+  border-bottom: 4rpx solid #6A7BC7;
+  padding-bottom: 8rpx;
+}
+.search{
+  height: 60rpx;
+  position: fixed;
+  top: 0rpx;
+  left: 30rpx;
+  right: 30rpx;
+  z-index: 1;
+  background: #fff;
+}
+.search>view{
+  display: flex;
+  height:60rpx;
+  background: #F0F0F0;
+  border-radius: 30rpx;
+  padding-left: 26rpx;
+  margin-top: 30rpx;
+}
+.search>view>input{
+  flex: 1;
+  height: 60rpx;
+}
+.search_logo{
+  width:40rpx;
+  height:40rpx;
+  margin-top: 10rpx;
+  padding-left: 30rpx;
+  padding-right: 34rpx;
+}
+.tishi{
+  display: flex;
+  font-size: 24rpx;
+  color: #999;
+  padding: 30rpx 26rpx 30rpx 26rpx;
+  position: fixed;
+  top: 90rpx;
+  left: 30rpx;
+  right: 30rpx;
+  z-index: 1;
+  border-bottom: 2rpx solid #F0F0F0;
+  background: #fff;
+}
+.tishi>view{
+  width: 250rpx;
+  line-height: 40rpx;
+}
+.tishi>text{
+  line-height: 40rpx;
+  padding-right: 150rpx;
+}
+.fankui{
+  color: #6A7BC7;
+  padding-left: 26rpx;
+
+  font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+.checkbox{
+  display: flex;
+  align-items: center;
+  color: #999;
+  padding: 30rpx;
+}
+.checkbox checkbox{
+  margin-right: 25rpx;
+}
+/*checkbox 选项框大小  */
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  border: 2rpx solid #6A7BC7;
+}
+/*checkbox选中后样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #6A7BC7;
+  border: none;
+  width: 34rpx;
+  height: 34rpx;
+}
+/*checkbox选中后图标样式  */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  width: 28rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+  background: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+.list-add>view:nth-child(1){
+  padding-top: 100rpx;
+}
+.list-add-li{
+  display: flex;
+}
+.list-add-li>text{
+  flex: 1;
+}
+.list-add-li{
+  height: 107rpx;
+  border-bottom: 2rpx solid #F0F0F0;
+  line-height: 107rpx;
+  padding: 0rpx 25rpx;
+  color: #999;
+  font-size: 28rpx;
+}
+.list-add-li>image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 34rpx;
+  padding-left: 20rpx;
+}
+/* 点此反馈 */
+.disease-fankui{
+  width: 315rpx;
+  position: fixed;
+  top: 270rpx;
+  left: 50%;
+  margin-left: -158rpx;
+}
+.disease-fankui image{
+  width: 315rpx;
+  height: 226rpx;
+}
+.disease-fankui view{
+  padding: 60rpx 0rpx;
+  text-align: center;
+  color: #999999;
+}
+.btn-fankui{
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  top: -40rpx;
+}
+.scroll-view{
+  padding-top: 240rpx;
+}
+.scroll-view label:nth-last-child(1){
+  padding-bottom: 150rpx;
+}
+.last-button{
+  position: fixed;
+  bottom: 0rpx;
+  left: 30rpx;
+  right: 30rpx;
+  background: #fff;
+  padding-top: 30rpx;
+}
+.last-button button{
+  margin-bottom: 30rpx;
+}

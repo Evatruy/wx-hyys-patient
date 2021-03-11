@@ -1,0 +1,106 @@
+/* pages/service/chat/chat.wxss */
+.title{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #DDDDDD;
+  color: #6A7BC7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1;
+}
+.scroll-content{
+  padding-top: 140rpx;
+  padding-bottom: 80rpx;
+}
+.patient{
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-end;
+  padding: 0rpx 30rpx; 
+  margin-bottom: 40rpx;
+}
+.patient-text{
+  word-break: break-all;
+  margin-right: 20rpx;
+  max-width: 70%;
+}
+.patient-text>view{
+  padding: 25rpx 35rpx;
+  background: #DAE1FF;
+  border-radius: 40rpx 0rpx 40rpx 40rpx;
+}
+.patient-text>text{
+  padding-left: 35rpx;
+  color: #999;
+  font-size: 20rpx;
+}
+.patient-img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.patient-img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+/* 药师 */
+.doctor{
+  display: flex;
+  align-items:flex-start;
+  justify-content: flex-start;
+  padding: 0rpx 30rpx; 
+  margin-bottom: 40rpx;
+}
+.doctor-text{
+  word-break: break-all;
+  margin-left: 20rpx;
+  max-width: 70%;
+}
+.doctor-text>view{
+  padding: 25rpx 35rpx;
+  border: 2rpx solid #C5C5C5;
+  border-radius: 0rpx 40rpx 40rpx 40rpx;
+}
+.doctor-text>text{
+  padding-left: 35rpx;
+  color: #999;
+  font-size: 20rpx;
+}
+.doctor-img{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.doctor-img image{
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.last-btn{
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  left: 0;
+  right: 0;
+}
+.last-btn button{
+  width: 50%;
+  color: #fff;
+  border-radius: 0rpx;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+}
+.last-btn button::after{
+  border: none;
+}
+.last-btn button:nth-child(1){
+  background: #A9B7F4;
+}
+.last-btn button:nth-child(2){
+  background: #6A7BC7;
+}

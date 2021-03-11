@@ -1,0 +1,10 @@
+<!--pages/mine/feedback/feedback.wxml-->
+<view class='view-body'>
+  <view class='msg'>您好，把您使用中遇到的问题告诉我，我会在第一时间给您回复，您也可以拨打我们的客服热线，感谢您的支持！</view>
+  <view class='phoneNum' bindtap='phoneCall' data-phone='13364044116'>热线电话：13364044116</view>
+  <view class='title_name'>您的问题</view>
+  <form bindsubmit="onSubmit" report-submit='true' >
+    <textarea maxlength='200' placeholder-class='placeholder' bindinput='textMsg' auto-focus placeholder="请详细描述您的问题，200字内" />
+    <button class='btn' formType="submit" >提交</button>
+  </form>
+</view>

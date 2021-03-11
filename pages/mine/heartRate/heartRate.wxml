@@ -1,0 +1,49 @@
+<!--pages/mine/heartRate/heartRate.wxml-->
+<scroll-view scroll-y>
+  <view class='scroll-view'>
+    <view class='title'>
+      <text>最近心率趋势</text>  
+      <text bindtap='linkKnow'>小知识</text>
+    </view>
+    <view class="content">
+      <view wx:if='{{total==0}}' class='bg-view'>暂无数据</view>
+      <canvas wx:else canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+      <!-- <button type="primary" bindtap="updateData">更新数据</button> -->
+        <view class='tips'>
+          <text wx:if='{{heart==""}}'>（tips：点击图表查看具体信息）</text> 
+          <block wx:else>
+            <text>{{month}}</text>
+            <text>心率：{{heart}}次/分钟</text>
+            <text wx:if='{{showColor=="正常"}}'><text class='scale'></text>正常</text>
+            <text wx:elif='{{showColor=="偏高"}}'><text class='scale scale-red'></text>偏高</text>
+            <text wx:else><text class='scale scale-yellow'></text>偏低</text>
+          </block>
+        </view>
+    </view>
+    <view class='title'>
+      <text>总记录</text>  
+      <view class='title-num' bindtap='linkTotal'>
+        <text>{{total}}条</text>
+        <image src='/images/mine-jiantou.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class='view-table'>
+   <text>时间</text>
+   <text></text>
+   <text>心率</text>
+  </view>
+  <view class='view-tbody'>
+    <view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="id">
+      <view class="content-li">
+        <text>{{item.dt}}</text>
+        <text></text>
+        <text>{{item.value}}</text>
+      </view>
+      <view class="del" catchtap="del" data-id="{{item.id}}">删除</view>
+    </view>
+  </view>
+</scroll-view>
+<view class='last-bottom'>
+    <button class='btn' bindtap='linkRecord'>+添加记录</button>
+</view>
