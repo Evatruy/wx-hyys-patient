@@ -15,7 +15,7 @@
     </swiper>
   </view>
   <view class="section">
-    <view class="section_func">
+    <view class="section_func" bindtap="toMyDoctor">
       <image src="../../images/icon-my-doctor.png"/>
       <text>我的医生</text>
     </view>

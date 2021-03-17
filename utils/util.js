@@ -20,8 +20,7 @@ var tokenData = ''
 function initToken(){
   wx.getStorage({
     key: 'token',
-    success: function(res) {
-      console.log(res)
+    success: function(res) {    
       if(res.data != ''){
         tokenData = res.data
       }

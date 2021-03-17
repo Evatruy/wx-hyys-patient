@@ -1,0 +1,61 @@
+@import "/utils/common.wxss";
+/* pages/find/myDoctor/index.wxss */
+
+.page{
+  background-color: #ffffff;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.item-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.first-layer{
+  display: flex;
+  flex-direction: row;
+}
+
+.first-text {
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #202028;
+}
+
+.signal{  
+  background: #FFAF3C;
+  border-radius: 3px;
+  margin-left: 16rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;  
+  font-size: 20rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.item-right>text{ 
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999DA5;
+  margin-top: 20rpx;
+}

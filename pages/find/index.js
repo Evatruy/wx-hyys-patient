@@ -104,6 +104,13 @@ Page({
     }
   },
 
+  //我的医生
+  toMyDoctor(){
+    wx.navigateTo({
+      url: '../find/myDoctor/index',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

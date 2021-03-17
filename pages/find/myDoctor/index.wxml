@@ -1,0 +1,15 @@
+<!--pages/find/myDoctor/index.wxml-->
+<view wx:for="{{doctorData}}" data-item="{{item}}" wx:key="{{item.id}}">
+  <view class="page">
+    <image src="{{item.ossHeadimgurl}}"/>
+    <view class="item-right">
+      <view class="first-layer">
+        <text class="first-text">{{item.name}}</text>
+        <text class="signal">已认证</text>
+      </view>
+      <text>{{item.hospital}}</text>
+      <text>{{item.department}}-{{item.position}}</text>
+    </view>
+  </view>
+  <view class="divider"></view>
+</view>
