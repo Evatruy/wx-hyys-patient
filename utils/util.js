@@ -16,8 +16,21 @@ module.exports = {
   formatTime: formatTime
 }
 
+var tokenData = ''
+function initToken(){
+  wx.getStorage({
+    key: 'token',
+    success: function(res) {
+      console.log(res)
+      if(res.data != ''){
+        tokenData = res.data
+      }
+    }
+  })  
+}
+
 var app = getApp();
-var host = 'https://api.yaoshi365.net/';
+var host = 'https://apis.yaoshi365.cn/api/';
 /**
  * POST请求，
  * URL：接口
@@ -30,8 +43,9 @@ function requestPost(url, postData, token_Date, doSuccess) {
     //项目的真正接口，通过字符串拼接方式实现
     url: host + url,
     header: {
-      "content-type": "application/x-www-form-urlencoded",
-      'Authorization': `Bearer ${token_Date}`
+      "content-type": "application/x-www-form-urlencoded",  
+      'Login-type': '1',
+      'Token': token_Date
     },
     data: postData,
     method: 'POST',
@@ -44,13 +58,41 @@ function requestPost(url, postData, token_Date, doSuccess) {
     },
   })
 }
+
+function requestPost2(url, postData, doSuccess) {
+  initToken()  
+  setTimeout(() => {
+    wx.request({
+      //项目的真正接口，通过字符串拼接方式实现
+      url: host + url,      
+      header: {
+        "content-type": "application/x-www-form-urlencoded",  
+        'Login-type': '1',
+        'Token': tokenData
+      },
+      data: postData,
+      method: 'POST',
+      success: function (res) {
+        //参数值为res.data,直接将返回的数据传入
+        doSuccess(res.data);
+      },
+      fail: function () {
+      
+      },
+    })
+  }, 1000);
+  }
+
 function requestDel(url, delData, token_Date, doSuccess) {
   wx.request({
     //项目的真正接口，通过字符串拼接方式实现
     url: host + url,
     header: {
       "content-type": "application/x-www-form-urlencoded",
-      'Authorization': `Bearer ${token_Date}`
+      'Login-type': '1',
+      'Token': wx.getStorage({
+        key: 'token',
+      })
     },
     data: delData,
     method: 'DELETE',
@@ -69,7 +111,10 @@ function requestGet(url, getData, token_Date, doSuccess) {
     url: host + url,
     header: {
       "content-type": "application/x-www-form-urlencoded",
-      'Authorization': `Bearer ${token_Date}`
+      'Login-type': '1',
+      'Token': wx.getStorage({
+        key: 'token',
+      })
     },
     data: getData,
     method: 'GET',
@@ -87,6 +132,7 @@ function requestGet(url, getData, token_Date, doSuccess) {
  * js文件中通过var call = require("../util/request.js")  加载
  */
 module.exports.requestPost = requestPost;
+module.exports.requestPost2 = requestPost2;
 module.exports.requestGet = requestGet;
 module.exports.requestDel = requestDel;
 module.exports.host = host;

@@ -9,14 +9,8 @@
   </view>
   <view>
     <swiper class="swiper-view" autoplay="true" indicator-color="#b2ffffff" indicator-active-color="#ffffff">
-      <swiper-item>
-        <image src="../../images/swiper-simple.png"/>
-      </swiper-item>
-      <swiper-item>
-        <image src="../../images/swiper-simple.png"/>
-      </swiper-item>
-      <swiper-item>
-        <image src="../../images/swiper-simple.png"/>
+      <swiper-item wx:for="{{bannerData}}" data-item="{{item}}" wx:key="{{item.id}}">
+        <image src="{{item.imageUrl}}"/>
       </swiper-item>
     </swiper>
   </view>
@@ -47,7 +41,7 @@
     </view>
   </view>
   <view class="team-view">
-    <image wx:for="{{teamData}}" data-item="{{item}}" src="{{item}}"/>
+    <image wx:for="{{teamData}}" wx:if="{{index < 4}}" data-item="{{item}}" src="{{item.fimagesUrl}}" wx:key="{{item.id}}"/>
   </view>
   <view class="func_title2">
     <text class="title_left">热门科室</text>
@@ -57,8 +51,8 @@
     </view>
   </view>
   <view class="department-view">
-    <view class="depart-v" wx:for="{{departData}}" data-item="{{item}}" wx:key="{{index}}">
-      <image src="{{item.imgUrl}}"/>
+    <view class="depart-v" wx:for="{{departData}}" data-item="{{item}}" wx:key="{{item.id}}">
+      <image src="{{item.imageUrl}}"/>
       <text>{{item.name}}</text>
     </view>
   </view>
@@ -66,8 +60,8 @@
     <text class="title_left">常见病症</text>    
   </view>
   <view class="disease-view">
-    <view class="disease-item" wx:for="{{diseaseData}}" data-item="item" wx:key="{{index}}">
-      <text>{{item}}</text>
+    <view class="disease-item" wx:for="{{diseaseData}}" data-item="item" wx:key="{{item.id}}">
+      <text>{{item.name}}</text>
     </view>
   </view>
   <view class="func_title2 func_title4">
@@ -77,16 +71,16 @@
       <image src="../../images/icon-arrow-green.png"/>
     </view>
   </view>
-  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="{{index}}">
-    <image src="{{item.preview}}"/>
+  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="{{item.id}}">
+    <image src="{{item.coverImage}}"/>
     <view class="news-right">
       <text>{{item.title}}</text>
       <view class="time-view">
         <view>
           <image src="../../images/icon-view.png"/>
-          <text>{{item.views}}</text>
+          <text>{{item.browse}}</text>
         </view>
-        <text>{{item.time}}</text>
+        <text>{{item.createdAt}}</text>
       </view>
     </view>
   </view>
