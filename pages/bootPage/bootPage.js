@@ -69,15 +69,7 @@ Page({
         if (code) {
           wx.getUserInfo({
             success: function (res) {
-              // console.log(res.openid, res.unionid)
-              var userInfo = res.userInfo
-              var nickName = userInfo.nickName
-              var avatarUrl = userInfo.avatarUrl
-              var gender = userInfo.gender //性别 0：未知、1：男、2：女
-              var province = userInfo.province
-              var city = userInfo.city
-              var country = userInfo.country
-              console.log(userInfo,nickName,avatarUrl,gender,province,city,country)
+              // console.log(res.openid, res.unionid)                                          
               wx.showLoading({
                 title: '获取数据中...',
               })
@@ -100,7 +92,7 @@ Page({
                   'content-type': 'application/x-www-form-urlencoded' // 默认值
                 },
                 success(res) {                              
-                  var result = res.data;                              
+                  var result = res.data;                                       
                   if (result.code == 0 && result.success) {
                     var token = result.data.token;
                     console.log(token)

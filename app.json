@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/find/doctor/detail",
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
