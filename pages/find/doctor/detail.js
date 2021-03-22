@@ -7,6 +7,8 @@ Page({
   data: {
     isFollow:0,
     isFold: true,
+    diseaseData:[],
+    serviceData:[]
   },
 
   showAll: function (e) {
