@@ -8,7 +8,11 @@ Page({
     isFollow:0,
     isFold: true,
     diseaseData:[],
-    serviceData:[]
+    serviceData:[],
+    weekTitle:['本周', '一', '二', '三', '四', '五', '六', '日'],
+    beforenoon:['专家', '普通', '门诊', '特需', '名医', '普通', '专家'],
+    afternoon:['特需', '名医', '普通', '专家', '专家', '普通', '门诊'],
+    evening:['专家', '普通', '门诊', '特需', '名医', '普通', '专家']
   },
 
   showAll: function (e) {

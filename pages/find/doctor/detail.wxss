@@ -150,7 +150,9 @@
   margin-right: 32rpx;
   margin-top: 79rpx;
   margin-bottom: 50rpx;
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .disease-view{
@@ -255,3 +257,59 @@
   align-items: center;
   margin: 0;
 }
+
+.table {
+  margin: 0rpx 32rpx;
+  border: 1rpx solid #DDDDDD;
+  border-radius: 10rpx;
+ }
+ .ae {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+ }
+ .wc {
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #DDDDDD;
+  border-right: 1rpx solid #DDDDDD;
+ }
+ .by-normal{
+  width: 100%;
+  background: #67b1f7;
+ }
+ .by-w {
+  background: #ffffff;
+ }
+ .by-purple {
+  width: 100%;
+  background: #CE7FFF;
+ }
+
+ .by-mz{
+   width: 100%;
+   background: #FF6E3C;
+ }
+
+ .by-null{
+   width: 100%;
+   background: #ffffff;
+ }
+
+ .dd {
+  width: 40%;
+  border-bottom: 1rpx solid #DDDDDD;
+  border-right: 1rpx solid #DDDDDD;
+  justify-content: center;
+  background: #ffffff;
+  color: #333;
+  display: flex;
+  height: 90rpx;
+  align-items: center;
+ } 

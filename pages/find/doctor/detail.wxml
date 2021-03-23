@@ -30,7 +30,7 @@
   </view>
 </view>
 <text class="title title2">问诊服务</text>
-<view class="service-view">
+<view class="service-view" wx:for="{{serviceData}}" wx:key="{{info.id}}" data-item="info">
   <view class="layer1">
     <text>图文咨询</text>
     <image src="/images/icon-img.png"/>
@@ -40,5 +40,79 @@
   <view class="layer2">
     <text>￥25.00</text>
     <button>立即咨询</button>
+  </view>
+</view>
+<text class="title">线下门诊时间</text>
+<view class="table">
+  <view class="ae by-w">
+    <block wx:for="{{weekTitle}}" wx:key="*this">
+    <view class="dd">{{item}}</view>
+    </block>
+  </view>
+  <block >
+  <view class="ae by-w " >
+    <view class="dd">上午</view>
+    <view wx:for="{{beforenoon}}" data-item="item" wx:key="{{index}}" class="wc">
+        <view wx:if="{{item == '门诊'}}">
+          <view class="wc by-mz">
+            {{item}}
+          </view>
+        </view>
+        <view wx:elif="{{item == '专家'}}">
+          <view class="wc by-purple">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '普通'}}">
+          <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:else>
+          <view class="wc by-null">{{item}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="ae by-w" >
+    <view class="dd">下午</view>
+    <view wx:for="{{afternoon}}" data-item="item" wx:key="{{index}}" class="wc">
+        <view wx:if="{{item == '门诊'}}">
+          <view class="wc by-mz">
+            {{item}}
+          </view>
+        </view>
+        <view wx:elif="{{item == '专家'}}">
+          <view class="wc by-purple">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '普通'}}">
+          <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:else>
+          <view class="wc by-null">{{item}}</view>
+        </view>
+    </view>
+  </view>
+  <view class="ae by-w" >
+    <view class="dd">晚上</view>
+    <view wx:for="{{evening}}" data-item="item" wx:key="{{index}}" class="wc">
+        <view wx:if="{{item == '门诊'}}">
+          <view class="wc by-mz">
+            {{item}}
+          </view>
+        </view>
+        <view wx:elif="{{item == '专家'}}">
+          <view class="wc by-purple">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '普通'}}">
+          <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:else>
+          <view class="wc by-null">{{item}}</view>
+        </view>
+    </view>
+  </view>
+  </block>
+</view>
+<view class="title">
+  <text>医生专栏</text>
+  <view>
+    <text>更多</text>
+    <image src="/images/icon-arrow-green.png"/>
   </view>
 </view>
