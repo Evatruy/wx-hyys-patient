@@ -1,24 +1,23 @@
 <!--pages/find/doctor/detail.wxml-->
 <view class="top">
   <view class="info-top">
-      <image src="/images/doctor-img.png"/>
+      <image src="{{info.ossHeadimgurl}}"/>
       <view class="info-item">
           <view class="first-layer">
-              <text class="first-text">{{item.name}}</text>
+              <text class="first-text">{{info.name}}</text>
               <text class="signal">已认证</text>
           </view>
-          <text>{{item.hospital}}</text>
-          <text>{{item.department}}-{{item.position}}</text>                
+          <text>{{info.hospital}}</text>
+          <text>{{info.department}}-{{info.position}}</text>                
       </view>
-      <button wx:if="{{isFollow==1}}" class="followed">+关注</button>
-      <button wx:else class="followed_no">已关注</button>
+      <button wx:if="{{info.isFollow}}" class="followed">已关注</button>
+      <button wx:else class="followed_no">+关注</button>
   </view>
-  
 </view>
 <view class="info-detail">
     <view class="long-dec {{isFold?'hide':'show'}}">        
       <text>
-        有赞的小伙伴目前已超过1000人，工程师比例占55%，我们有很浓的工程师氛围，每周都有很多的有意思的分享：有出国旅游的分享、有如何搭讪的分享、有如何装修房子的分享...技术分享更是数不胜数。 我们的工作不是很轻松，但我们的氛围很轻松，很open，公司里随处可见骑着独轮车来回跑的工程师、懒人沙发、午睡吊篮、复古电话亭等等，每个月都有节日、新人表演、拓展、派对等，对我们来说，天天都可以是节日。我们倡导简单直接的沟通方式，希望做一家通透的公司。这里并没有过多的等级划分，你可以随时提出自己的意见和任何人PK。福利方面我们全额缴纳五险一金，每月980元的有赞E卡鼓励大家一起吃喝玩乐。工程师标配MacBookPro、大屏显示器和机械键盘。办公室里常备零食、水果，休息区有电视、游戏机、桌球、乒乓球、四驱赛车、桌游随时供大家放松减压。每天晚下班的打车费报销，每年给你和你的家人提供旅游和体检等等。
+        {{info.content}}
       </text>
     </view>
     <image class="arrow" src="{{isFold?'/images/down.png':'/images/up.png'}}" bindtap="showAll"/>
@@ -52,17 +51,18 @@
   <block >
   <view class="ae by-w " >
     <view class="dd">上午</view>
-    <view wx:for="{{beforenoon}}" data-item="item" wx:key="{{index}}" class="wc">
-        <view wx:if="{{item == '门诊'}}">
-          <view class="wc by-mz">
-            {{item}}
-          </view>
-        </view>
-        <view wx:elif="{{item == '专家'}}">
-          <view class="wc by-purple">{{item}}</view>
+    <view wx:for="{{beforenoon}}" data-item="item" wx:key="{{index}}" class="wc">        
+        <view wx:if="{{item == '专家'}}">
+          <view class="wc by-zj">{{item}}</view>
         </view>
         <view wx:elif="{{item == '普通'}}">
           <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '特需'}}">
+          <view class="wc by-tx">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '点诊'}}">
+          <view class="wc by-dz">{{item}}</view>
         </view>
         <view wx:else>
           <view class="wc by-null">{{item}}</view>
@@ -72,16 +72,17 @@
   <view class="ae by-w" >
     <view class="dd">下午</view>
     <view wx:for="{{afternoon}}" data-item="item" wx:key="{{index}}" class="wc">
-        <view wx:if="{{item == '门诊'}}">
-          <view class="wc by-mz">
-            {{item}}
-          </view>
-        </view>
-        <view wx:elif="{{item == '专家'}}">
-          <view class="wc by-purple">{{item}}</view>
+      <view wx:if="{{item == '专家'}}">
+          <view class="wc by-zj">{{item}}</view>
         </view>
         <view wx:elif="{{item == '普通'}}">
           <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '特需'}}">
+          <view class="wc by-tx">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '点诊'}}">
+          <view class="wc by-dz">{{item}}</view>
         </view>
         <view wx:else>
           <view class="wc by-null">{{item}}</view>
@@ -91,16 +92,17 @@
   <view class="ae by-w" >
     <view class="dd">晚上</view>
     <view wx:for="{{evening}}" data-item="item" wx:key="{{index}}" class="wc">
-        <view wx:if="{{item == '门诊'}}">
-          <view class="wc by-mz">
-            {{item}}
-          </view>
-        </view>
-        <view wx:elif="{{item == '专家'}}">
-          <view class="wc by-purple">{{item}}</view>
+      <view wx:if="{{item == '专家'}}">
+          <view class="wc by-zj">{{item}}</view>
         </view>
         <view wx:elif="{{item == '普通'}}">
           <view class="wc by-normal">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '特需'}}">
+          <view class="wc by-tx">{{item}}</view>
+        </view>
+        <view wx:elif="{{item == '点诊'}}">
+          <view class="wc by-dz">{{item}}</view>
         </view>
         <view wx:else>
           <view class="wc by-null">{{item}}</view>
@@ -111,8 +113,21 @@
 </view>
 <view class="title">
   <text>医生专栏</text>
-  <view>
+  <view  class="more">
     <text>更多</text>
     <image src="/images/icon-arrow-green.png"/>
+  </view>
+</view>
+<view class="news-item" wx:for="{{newsData}}" data-item="item" wx:key="{{item.id}}">
+  <image src="{{item.coverImage}}"/>
+  <view class="news-right">
+    <text>{{item.title}}</text>
+    <view class="news-bottom">
+      <view>
+        <image src="/images/icon-view.png"/>
+        <text>{{item.browse}}</text>
+      </view>
+      <text>{{item.createdAt}}</text>
+    </view>
   </view>
 </view>

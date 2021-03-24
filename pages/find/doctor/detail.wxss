@@ -282,14 +282,24 @@
  }
  .by-normal{
   width: 100%;
-  background: #67b1f7;
+  background: #0052D4;
  }
  .by-w {
   background: #ffffff;
  }
- .by-purple {
+ .by-zj {
   width: 100%;
   background: #CE7FFF;
+ }
+
+ .by-tx{
+   width: 100%;
+   background: #FF7777;
+ }
+
+ .by-dz{
+   width: 100%;
+   background: #44CB5A;
  }
 
  .by-mz{
@@ -313,3 +323,77 @@
   height: 90rpx;
   align-items: center;
  } 
+
+ .more>text{
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #27CC92;
+ }
+
+ .more>image{
+  margin-left: 16rpx;
+  width: 12rpx;
+  height: 20rpx;
+  background: #27CC92;
+ }
+
+ .news-item{
+   padding-left: 32rpx;
+   padding-right: 32rpx;
+   margin-bottom: 32rpx;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+ }
+
+.news-item>image{
+  width: 168rpx;
+  height: 168rpx;
+  background: #D5E1FC;
+  border-radius: 30rpx;
+  margin-right: 22rpx;
+}
+
+.news-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.news-right>text{
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #202028;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;/* 关键属性 */
+  -webkit-line-clamp:2;/* 关键属性 */
+  overflow: hidden;/* 关键属性 */
+  text-overflow:ellipsis;/* 超出内容显示省略号*/
+  margin-bottom: 43rpx;
+}
+
+.news-bottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.news-bottom image{
+  width: 28rpx;
+  height: 20rpx;
+  margin-right: 12rpx;
+}
+
+.news-bottom text{
+  font-size: 24rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999DA5;
+}

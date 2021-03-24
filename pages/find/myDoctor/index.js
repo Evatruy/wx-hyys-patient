@@ -30,6 +30,14 @@ Page({
     }
   },
 
+  //跳转医生详情页
+  linkDetails(e){
+    var data_id = e.currentTarget.dataset.item.id
+    wx.navigateTo({
+      url: '../doctor/detail?id='+data_id,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,5 +1,5 @@
 <!--pages/find/myDoctor/index.wxml-->
-<view wx:for="{{doctorData}}" data-item="{{item}}" wx:key="{{item.id}}">
+<view wx:for="{{doctorData}}" data-item="{{item}}" wx:key="{{item.id}}" bindtap='linkDetails'>
   <view class="page">
     <image src="{{item.ossHeadimgurl}}"/>
     <view class="item-right">
