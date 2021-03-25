@@ -41,6 +41,8 @@ Page({
     }
     util.requestPost2('patient/my/doctors/getDoctorInfo', rq, this.handleInfo.bind(this))
     util.requestPost2('patient/my/doctors/getDoctorOfflineTime', rq, this.handleTime.bind(this))
+    util.requestPost2('patient/my/doctors/getDoctorDiseaseList', rq, this.handleDisease.bind(this))
+    util.requestPost2('patient/my/doctors/getDoctorBusinessList', rq, this.handleService.bind(this))
     rq = {
       doctorInfoId: options.id,
       num: 5
@@ -52,6 +54,33 @@ Page({
     if(res.code == 0 && res.success){
       this.setData({
         info:res.data
+      })
+    }else{
+      wx.showToast({
+        title: res.message,
+      })
+    }
+  },
+
+  //处理擅长病症数据
+  handleDisease(res){
+    if(res.code == 0 && res.success){
+      this.setData({
+        diseaseData:res.data
+      })
+    }else{
+      wx.showToast({
+        title: res.message,
+      })
+    }
+  },
+
+  //处理问诊服务数据
+  handleService(res){
+    if(res.code == 0 && res.success){
+      console.log(res.data)
+      this.setData({
+        serviceData:res.data
       })
     }else{
       wx.showToast({
@@ -84,7 +113,6 @@ Page({
 
   //处理专栏数据
   handleNews(res){
-    console.log(res)
     if(res.code == 0 && res.success){
       this.setData({
         newsData:res.data

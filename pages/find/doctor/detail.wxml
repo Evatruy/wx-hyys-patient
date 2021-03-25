@@ -24,20 +24,20 @@
   </view>
 <text class="title title1">擅长病症</text>
 <view class="disease-view">
-  <view wx:for="{{diseaseData}}" data-item="item" wx:key="{{item.id}}" class="disease-item">
-    <text>{{item.name}}</text>
+  <view wx:for="{{diseaseData}}" wx:key="{{index}}" class="disease-item">
+    <text>{{item}}</text>
   </view>
 </view>
 <text class="title title2">问诊服务</text>
-<view class="service-view" wx:for="{{serviceData}}" wx:key="{{info.id}}" data-item="info">
+<view class="service-view" wx:for="{{serviceData}}" wx:key="{{index}}" >
   <view class="layer1">
-    <text>图文咨询</text>
+    <text>{{item.name}}</text>
     <image src="/images/icon-img.png"/>
   </view>
-  <text style="margin-bottom:26rpx">服务周期：1天</text>
-  <text style="margin-bottom:62rpx">为全家提供医疗咨询服务为全家提供医疗咨询服</text>
+  <text style="margin-bottom:26rpx">服务周期：{{item.cycle}}天</text>
+  <text style="margin-bottom:62rpx">{{item.content}}</text>
   <view class="layer2">
-    <text>￥25.00</text>
+    <text>￥{{item.price}}</text>
     <button>立即咨询</button>
   </view>
 </view>

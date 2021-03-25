@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/find/myDoctor/index",
+    "pages/find/doctor/detail",
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
-    "pages/find/myDoctor/index",
-    "pages/find/doctor/detail",
     "pages/service/index/index",
     "pages/mine/index/index",
     "pages/consult/consult",
