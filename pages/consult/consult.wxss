@@ -1,1 +1,128 @@
 /* pages/consult/consult.wxss */
+.page{
+  margin: 0rpx 32rpx;
+}
+
+.swiper-tab{
+	width: 100%;
+	text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list{  
+  font-size: 32rpx;
+  display: inline-block;
+	width: 33.33%;
+  color: #202028;
+  font-family: Microsoft YaHei;
+}
+
+.on{ 
+  font-weight: bold;
+  color: #00D190;
+  border-bottom: 5rpx solid #00D190;
+}
+
+.red-dot{
+  width: 16rpx;
+  height: 16rpx;
+  display: inline-block;
+  margin-bottom: 20rpx;
+  background: #E43E3E;
+  border-radius: 50%;
+}
+ 
+.swiper-box{ 
+  display: block;
+  height: 100%; 
+  width: 100%; 
+  overflow: hidden; 
+}
+.swiper-box view{
+	text-align: center;
+}
+
+.content-page{
+  margin-top: 22rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+}
+
+.consult-item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50rpx;
+  width: 100%;
+  height: 334rpx;
+  background: #FFFFFF;
+  box-shadow: 0rpx 0rpx 32rpx 0rpx rgba(12, 17, 55, 0.1);
+  border-radius: 30rpx;
+}
+
+.top-title{  
+  width: 100%;
+  height: 90rpx;
+  position: relative;
+}
+
+.top-title>image{
+  width: 100%;
+  height: 90rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.top-content{
+  position: absolute;
+  width: 100%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.top-content text{  
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #FFFFFF;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+
+.center-content{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 30rpx 20rpx;
+}
+
+.center-content>image{
+  width: 106rpx;
+  height: 106rpx;
+  border-radius: 50%;
+  margin-right: 23rpx;
+}
+
+.center-right{
+  display: flex;
+  flex-direction: column;
+}
+
+.right-one{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-one>text{
+  font-family: Microsoft YaHei;
+}

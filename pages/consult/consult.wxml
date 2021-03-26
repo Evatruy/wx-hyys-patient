@@ -1,2 +1,38 @@
 <!--pages/consult/consult.wxml-->
-<text>pages/consult/consult.wxml</text>
+<view class="page">
+  <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">图文咨询<view class="red-dot"/></view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">电话咨询</view>
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">视频咨询</view>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">    
+      <swiper-item>
+        <view class="content-page">
+          <view class="consult-item">
+            <view class="top-title">
+              <image src="/images/consult-bg.png"/>
+              <view class="top-content">
+                <view style="width:8rpx;height:28rpx;background:#fff;margin-left:20rpx"/>
+                <text>普通预约咨询普通预约咨询普通预约咨询普通预约咨询</text>
+              </view>
+            </view>
+            <view class="center-content">
+              <image src="/images/doctor-img.png"/>
+              <view class="center-right">
+                <view class="right-one">
+                  <text style="font-size:32rpx; color:#202028">杨军医生团队专家组</text>
+                  <text style="font-size:24rpx; color:#999DA5;margin-left:15rpx">4-18 15:00</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view>我是电话咨询</view>
+      </swiper-item>
+      <swiper-item>
+        <view>我是视频咨询</view>
+      </swiper-item>
+  </swiper>
+</view>

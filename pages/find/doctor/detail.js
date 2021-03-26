@@ -78,7 +78,6 @@ Page({
   //处理问诊服务数据
   handleService(res){
     if(res.code == 0 && res.success){
-      console.log(res.data)
       this.setData({
         serviceData:res.data
       })

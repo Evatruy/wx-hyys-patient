@@ -1,13 +1,14 @@
 {
-  "pages": [
-    "pages/find/myDoctor/index",
-    "pages/find/doctor/detail",
+  "pages": [    
+    "pages/consult/consult",
+
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
     "pages/service/index/index",
+    "pages/find/myDoctor/index",
+    "pages/find/doctor/detail",
     "pages/mine/index/index",
-    "pages/consult/consult",
     "pages/addDisease/addDisease",
     "pages/mine/heartRate/heartRate",
     "pages/mine/bmi/bmi",
