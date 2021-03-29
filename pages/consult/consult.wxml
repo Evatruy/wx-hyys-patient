@@ -20,10 +20,15 @@
               <image src="/images/doctor-img.png"/>
               <view class="center-right">
                 <view class="right-one">
-                  <text style="font-size:32rpx; color:#202028">杨军医生团队专家组</text>
+                  <view class="right-title">杨军医生团队专家组杨军医生团队专家组杨军医生团队专家组</view>
                   <text style="font-size:24rpx; color:#999DA5;margin-left:15rpx">4-18 15:00</text>
                 </view>
+                <view class="right-sub-title">医生你好医生你好医生你好医生医医生你好医生你好医生你好医生医</view>
               </view>
+            </view>
+            <view class="bottom-content">
+              <image src="/images/icon-clock.png"/>
+              <text>04-15 15:00至04-18 15:00 共3天04-15 15:00至04-18 15:00 共3天</text>
             </view>
           </view>
         </view>

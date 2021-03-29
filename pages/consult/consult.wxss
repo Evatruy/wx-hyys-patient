@@ -53,7 +53,7 @@
   flex-direction: column;
   margin-bottom: 50rpx;
   width: 100%;
-  height: 334rpx;
+  /* height: 334rpx; */
   background: #FFFFFF;
   box-shadow: 0rpx 0rpx 32rpx 0rpx rgba(12, 17, 55, 0.1);
   border-radius: 30rpx;
@@ -96,33 +96,72 @@
   text-overflow:ellipsis;
 }
 
-.center-content{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 30rpx 20rpx;
-}
-
-.center-content>image{
+.center-content image{
   width: 106rpx;
   height: 106rpx;
   border-radius: 50%;
   margin-right: 23rpx;
 }
-
-.center-right{
+.center-content{
+  padding: 30rpx 20rpx;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+.center-right{
+  flex: 1;
+}
+.right-one{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+.right-one>text{
+  display: inline-block;
+  width: 161rpx;
+}
+.right-title{
+  max-width: 292rpx;
+  font-size:32rpx; 
+  color:#202028;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
+}
+.right-sub-title{
+  max-width: 456rpx;
+  font-size:28rpx; 
+  color: #999DA5;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
 }
 
-.right-one{
-  width: 100%;
+.bottom-content{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 26rpx;
+  padding-top: 25rpx;
   align-items: center;
 }
-
-.right-one>text{
+.bottom-content>image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 14rpx;
+}
+.bottom-content>text{
+  max-width: 84%;
+  font-size: 28rpx;
   font-family: Microsoft YaHei;
+  color: #B8BCC1;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow:ellipsis;
 }
