@@ -1,4 +1,6 @@
 // pages/consult/consult.js
+const util = require("../../utils/util");
+
 Page({
 
   /**
@@ -6,12 +8,13 @@ Page({
    */
   data: {
     /**
-        * 页面配置
-        */
-       winWidth: 0,
-       winHeight: 0,
-       // tab切换
-       currentTab: 0,
+    * 页面配置
+    */
+    winWidth: 0,
+    winHeight: 0,
+    // tab切换
+    currentTab: 0,
+    dataList:[]
   },
 
     /**
@@ -19,7 +22,10 @@ Page({
      */
     bindChange: function(e) {
       var that = this;
-      that.setData( { currentTab: e.detail.current });
+      that.setData( { 
+        currentTab: e.detail.current
+       });
+       that.getDataList()
     },
     /**
      * 点击tab切换
@@ -32,6 +38,31 @@ Page({
         that.setData( {
           currentTab: e.target.dataset.current
         })
+        that.getDataList()
+      }
+    },
+
+    /**
+     * 获取list数据
+     */
+    getDataList: function(){
+      var that = this;        
+      var rq = {
+        type: that.data.currentTab+2
+      }
+      util.requestPost2("patient/orders/queryConsulting", rq, this.handleList.bind(this))
+    },
+
+    handleList: function(res){
+      console.log(res);
+      if(res.code == 0 && res.success){
+        this.setData({
+          dataList: res.data
+        })    
+      }else{
+        wx.showToast({
+          title: res.message,
+        })
       }
     },
 
@@ -40,6 +71,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    this.getDataList();
     /**
      * 获取系统信息
      */
@@ -50,7 +82,6 @@ Page({
           winHeight: res.windowHeight
         });
       }
- 
     });
   },
 

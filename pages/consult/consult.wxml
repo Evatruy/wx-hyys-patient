@@ -1,3 +1,4 @@
+<wxs src='../../utils/utils.wxs' module='tools'/>
 <!--pages/consult/consult.wxml-->
 <view class="page">
   <view class="swiper-tab">
@@ -6,38 +7,32 @@
       <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">视频咨询</view>
   </view>
   <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">    
-      <swiper-item>
+      <swiper-item wx:for="{{[0,1,2]}}" wx:key="{{index}}">
         <view class="content-page">
-          <view class="consult-item">
+          <view class="consult-item" wx:for="{{dataList}}" wx:key="*this">
             <view class="top-title">
               <image src="/images/consult-bg.png"/>
               <view class="top-content">
                 <view style="width:8rpx;height:28rpx;background:#fff;margin-left:20rpx"/>
-                <text>普通预约咨询普通预约咨询普通预约咨询普通预约咨询</text>
+                <text>{{dataList[index].typeName}}</text>
               </view>
             </view>
             <view class="center-content">
-              <image src="/images/doctor-img.png"/>
+              <image src="{{item.ossHeadimgurl}}"/>
               <view class="center-right">
                 <view class="right-one">
-                  <view class="right-title">杨军医生团队专家组杨军医生团队专家组杨军医生团队专家组</view>
-                  <text style="font-size:24rpx; color:#999DA5;margin-left:15rpx">4-18 15:00</text>
+                  <view class="right-title">{{item.targetName}}</view>
+                  <text style="font-size:24rpx; color:#999DA5;margin-left:15rpx">{{tools.substring(item.beginTime,5,16)}}</text>
                 </view>
-                <view class="right-sub-title">医生你好医生你好医生你好医生医医生你好医生你好医生你好医生医</view>
+                <view class="right-sub-title">{{item.content}}</view>
               </view>
             </view>
             <view class="bottom-content">
               <image src="/images/icon-clock.png"/>
-              <text>04-15 15:00至04-18 15:00 共3天04-15 15:00至04-18 15:00 共3天</text>
+              <text>{{item.intentionTime}}</text>
             </view>
           </view>
         </view>
-      </swiper-item>
-      <swiper-item>
-        <view>我是电话咨询</view>
-      </swiper-item>
-      <swiper-item>
-        <view>我是视频咨询</view>
-      </swiper-item>
+      </swiper-item>    
   </swiper>
 </view>

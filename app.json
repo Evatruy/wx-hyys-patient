@@ -1,13 +1,12 @@
 {
   "pages": [    
-    "pages/consult/consult",
-
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
     "pages/service/index/index",
     "pages/find/myDoctor/index",
     "pages/find/doctor/detail",
+    "pages/consult/consult",
     "pages/mine/index/index",
     "pages/addDisease/addDisease",
     "pages/mine/heartRate/heartRate",

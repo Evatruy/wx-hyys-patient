@@ -38,7 +38,7 @@
   width: 100%; 
   overflow: hidden; 
 }
-.swiper-box view{
+.swiper-box>view{
 	text-align: center;
 }
 
@@ -139,6 +139,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow:ellipsis;
+  text-align: left;
 }
 
 .bottom-content{
