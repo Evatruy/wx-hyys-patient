@@ -1,0 +1,286 @@
+/* pages/science/index.wxss */
+page{
+  background: #fff;
+  width: 100%;
+  height: 100%;
+}
+
+.search{
+  display: flex;
+  flex-direction: row;
+  height: 88rpx;
+  background: #fff;
+  align-items: center;
+}
+
+.searchItem {
+  display: flex;
+  width: 100%; 
+  height: 88rpx; 
+  flex: 1;
+  align-items: center;
+  background: #F7F9FA;
+  flex-direction: row;
+  border-radius: 44rpx;
+  margin-right: 30rpx;
+  margin-left: 32rpx;
+}
+
+.searchItem image {
+  height: 40rpx;
+  width: 40rpx;
+  align-self: center;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+}
+
+.searchItem input {
+  flex: 1;
+  font-size: 30rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  font-family: Microsoft YaHei;
+  color: #B8BCC1;
+}
+
+.search image{
+  width: 48rpx;
+  height: 36rpx;
+  margin-right: 50rpx;
+}
+
+.swiper-view {
+  margin-top: 40rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+}
+
+.swiper-view image{
+  width: 686rpx;
+  height: 300rpx;
+}
+
+.section{
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.section_func{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section_func image{
+  width: 84rpx;
+  height: 84rpx;
+}
+
+.section_func text{
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  color: #202028;
+  margin-top: 19rpx;
+}
+
+.divider{
+  width: 100%;
+  height: 20rpx;
+  background: #F7F9FA;
+  margin-top: 60rpx;
+}
+
+.func_title{
+  margin-top: 60rpx;
+  margin-left: 33rpx;
+  margin-right: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title_left{
+  font-size: 38rpx;
+  font-family: Microsoft YaHei;
+  font-weight: bold;
+  color: #363A43;
+}
+
+.func_more{
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  color: #27CC92;
+  align-items: flex-end;
+}
+
+.func_more image{
+  width: 12rpx;
+  height: 20rpx;
+  margin-left: 16rpx;
+}
+
+.team-view{
+  margin-top: 50rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team-view image{
+  width: 330rpx;
+  margin-bottom: 30rpx;
+  height: 136rpx;
+}
+
+.func_title2{
+  margin-top: 50rpx;
+  margin-left: 33rpx;
+  margin-right: 32rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.department-view{
+  margin-top: 50rpx;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.depart-v{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.department-view image{
+  width: 76rpx;
+  margin-bottom: 30rpx;
+  height: 76rpx;
+}
+
+.department-view text{
+  font-size: 26rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #202028;
+}
+
+.func_title3{
+  margin-top: 80rpx;
+}
+
+.disease-view{
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  margin-top: 50rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.disease-item{
+  max-width: 276rpx;
+  height: 66rpx;
+  background: #FFAF3C;
+  border-radius: 33rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  margin-bottom: 30rpx;
+  margin-right: 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.disease-item text{
+  max-width: 216rpx;
+  font-size: 30rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  /* 超出隐藏 */
+  overflow:hidden;
+  /*超出显示为省略号*/
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  /*强制英文单词自动换行*/
+  /* word-break:break-all; */
+}
+
+.func_title4{
+  margin-top: 80rpx;
+  margin-bottom: 50rpx;
+}
+
+.news-view{
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+}
+
+.news-view>image{
+  width: 168rpx;
+  height: 168rpx;
+  background: #D5E1FC;
+  border-radius: 30rpx;
+  margin-right: 22rpx;
+}
+
+.news-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-right>text{
+  max-width: 496rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #202028;
+  /* 超出隐藏 */
+  overflow:hidden;
+  /*超出显示为省略号*/
+  text-overflow:ellipsis;
+  /*强制英文单词自动换行*/
+  word-break:break-all;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 44rpx;
+}
+
+.time-view{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time-view image{
+  width: 28rpx;
+  height: 20rpx;
+  margin-right: 12rpx;
+}
+
+.time-view text{
+  font-size: 24rpx;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #999DA5;
+}

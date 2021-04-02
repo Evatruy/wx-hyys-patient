@@ -19,22 +19,19 @@ Page({
        })
      },
    })
-    wx.getStorage({
-      key: 'token',
-      success: function (res) {
-        if (res.data != '' || res.data != null) {
-          if(status=='10'){
-            wx.reLaunch({
-              url: '../service/index/index',
-            })
-          }else{
-            wx.reLaunch({
-              url: '../login/login',
-            })
-          } 
+   var status = this.status;
+  wx.getStorage({
+    key: 'token',
+    success: function (res) {
+      if (res.data != '' || res.data != null) {
+        if(status=='10'){
+          wx.reLaunch({
+            url: '../find/index',
+          })
         }
-      },
-    });
+      }
+    },
+  });
     setTimeout(function(){
       that.setData({
         time:false

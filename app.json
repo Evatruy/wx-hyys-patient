@@ -1,5 +1,5 @@
 {
-  "pages": [    
+  "pages": [
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
@@ -7,6 +7,7 @@
     "pages/find/myDoctor/index",
     "pages/find/doctor/detail",
     "pages/consult/consult",
+    "pages/science/index",
     "pages/mine/index/index",
     "pages/addDisease/addDisease",
     "pages/mine/heartRate/heartRate",
@@ -17,22 +18,12 @@
     "pages/mine/feedback/feedback",
     "pages/mine/totalRecord/totalRecord",
     "pages/mine/addRecord/addRecord",
-    "pages/navigation/index/index",
-    "pages/navigation/drugstoreDetails/drugstoreDetails",
-    "pages/navigation/more/more",
     "pages/mine/knowledge/knowledge",
     "pages/service/chat/chat",
     "pages/service/reply/reply",
     "pages/service/consultation/consultation",
-    "pages/navigation/details/details",
-    "pages/navigation/map/map",
     "pages/login/loginWord/loginWord"
   ],
-  "permission": {
-    "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的线路查看路线"
-    }
-  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
@@ -58,7 +49,7 @@
         "selectedIconPath": "./images/icon-consult-bg.png"
       },
       {
-        "pagePath": "pages/navigation/index/index",
+        "pagePath": "pages/science/index",
         "text": "科普",
         "iconPath": "./images/icon-science.png",
         "selectedIconPath": "./images/icon-science-bg.png"
@@ -70,9 +61,6 @@
         "selectedIconPath": "./images/icon-mine-bg.png"
       }
     ]
-  },
-  "plugins": {
-   
   },
   "sitemapLocation": "sitemap.json"
 }
