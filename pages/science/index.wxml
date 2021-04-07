@@ -21,17 +21,20 @@
       <image src="../../images/icon-arrow-green.png"/>
     </view>
   </view>
-  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="{{item.id}}">
-    <image src="{{item.coverImage}}"/>
-    <view class="news-right">
-      <text>{{item.title}}</text>
-      <view class="time-view">
-        <view>
-          <image src="../../images/icon-view.png"/>
-          <text>{{item.browse}}</text>
+  <scroll-view scroll-y class='content-center'>
+    <view class="news-view" wx:for="{{items}}" data-item="item"
+    data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:key="id">
+      <image src="{{item.coverImage}}"/>
+      <view class="news-right">
+        <text>{{item.title}}</text>
+        <view class="time-view">
+          <view>
+            <image src="../../images/icon-view.png"/>
+            <text>{{item.browse}}</text>
+          </view>
+          <text>{{item.createdAt}}</text>
         </view>
-        <text>{{item.createdAt}}</text>
       </view>
     </view>
-  </view>
+  </scroll-view> 
 </view>

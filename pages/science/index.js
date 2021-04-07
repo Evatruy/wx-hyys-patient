@@ -28,10 +28,10 @@ Page({
     }
     util.requestPost2("common/banner/list", data, that.handleBanner.bind(this));
     var rq = {
-      pageNum: this.page,
+      pageNum: that.data.page,
       pageSize: '10'
     }
-    util.requestPost2("patient/articles/patientGetPatientArticleList", rq, this.handleHas.bind(this));
+    util.requestPost2("patient/articles/patientGetPatientArticleList", rq, that.handleHas.bind(this));
   },
 
   //加载banner数据
@@ -79,13 +79,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
 
   },
 
@@ -147,15 +140,12 @@ Page({
     var that = this
     if (this.data.page < this.data.pageCount) {
       var page = this.data.page;
-      page++;
-      var data = {
-        page: page
-      }
+      page++;      
       var rq = {
-        pageNum: this.page,
+        pageNum: page,
         pageSize: '10'
       }
-      util.requestPost2("patient/articles/patientGetPatientArticleList", rq, this.handleHas.bind(this));
+      util.requestPost2("patient/articles/patientGetPatientArticleList", rq, that.handleHas.bind(this));
       return false
     }
     if (this.data.page == this.data.pageCount) {
@@ -167,24 +157,16 @@ Page({
   },
   //分页
   handleHas(res){
-    console.log(res);
-    if (res.status_code == 200) {
+    if (res.code == 0 && res.success) {
       var msg = this.data.items;
-      var items = msg.concat(res.data);
+      var items = msg.concat(res.data.list);
       this.setData({
         items: items,
-        page: res.page,//当前页
-        num: res.num,//当前页的总条数
-        count: res.count,//总条数
-        pageCount: res.pageCount,//总页数
+        page: res.data.pageNum,//当前页
+        num: 10,//当前页的总条数
+        count: res.data.total,//总条数
+        pageCount: res.data.pages,//总页数
       })
     }
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  },  
 })
