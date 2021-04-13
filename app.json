@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/find/szmf/index",
     "pages/bootPage/bootPage",
     "pages/login/login",
     "pages/find/index",
@@ -22,12 +23,12 @@
     "pages/service/chat/chat",
     "pages/service/reply/reply",
     "pages/service/consultation/consultation",
-    "pages/login/loginWord/loginWord"
+    "pages/login/loginWord/loginWord",
+    "pages/component/navigate/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "浩雅健康助手",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

@@ -1,0 +1,6 @@
+<!--pages/find/szmf/index.wxml-->
+<!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
+<view class="home">    
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>    
+  
+</view>

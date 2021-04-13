@@ -3,6 +3,9 @@ page{
   font-size: 30rpx;
   font-family: "MicrosoftYaHei";
   color: #333;
+  position: relative;  
+  z-index: 9999998;  
+  background: #fff;
 }
 .container {
   height: 100%;

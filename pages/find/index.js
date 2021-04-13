@@ -92,7 +92,6 @@ Page({
 
   //加载科普数据
   handleNews(res){    
-    console.log(res)
     if(res.code == 0 && res.success){
       this.setData({
         newsData: res.data.list
@@ -108,6 +107,13 @@ Page({
   toMyDoctor(){
     wx.navigateTo({
       url: '../find/myDoctor/index',
+    })
+  },
+
+  //首诊免费
+  toSzmf(){
+    wx.navigateTo({
+      url: '/pages/find/szmf/index',
     })
   },
 

@@ -6,32 +6,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // headimgurl: '/images/default-avatar.png',//头像
-    headimgurl:'',
-    color:'color:#4BB24B',//设置偏高正常偏低的字体颜色
-    token:'',//token值
+    headimgurl:'',   
     messageCount:'1',//通知数量
     name:'',//姓名
     sex:'',//性别
-    age:'',//年龄
-    pressure:'',//暂无数据
-    systolicPressure:'',//收缩压
-    diastolicPressure:'',//舒张压
-    resultPressure:'',//血压状态值
-    meterTimePressure:'',//血压时间
-    sugars:'',//暂无血糖数据
-    sugarsValue:'',//血糖值
-    resultSugars: '',//血糖状态值
-    meterTimeSugars:'',//血糖时间
-    timeSlotSugars:'',//血糖时间段
-    bmi: '',//暂无bmi数据
-    bmiValue: '',//bmi值
-    resultBmi: '',//bmi状态值
-    meterTimeBmi: '',//bmi时间
-    heart: '',//暂无bmi数据
-    heartValue: '',//heart值
-    resultHeart: '',//heart状态值
-    meterTimeHeart: '',//heart时间
+    age:'',//年龄    
     funcData://功能按钮
     [
       {

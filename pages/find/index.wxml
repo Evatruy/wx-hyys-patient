@@ -9,7 +9,7 @@
   </view>
   <view>
     <swiper class="swiper-view" autoplay="true" indicator-color="#b2ffffff" indicator-active-color="#ffffff">
-      <swiper-item wx:for="{{bannerData}}" data-item="{{item}}" wx:key="{{index}}">
+      <swiper-item wx:for="{{bannerData}}" data-item="{{item}}" wx:key="index">
         <image src="{{item.imageUrl}}"/>
       </swiper-item>
     </swiper>
@@ -19,7 +19,7 @@
       <image src="../../images/icon-my-doctor.png"/>
       <text>我的医生</text>
     </view>
-    <view class="section_func">
+    <view class="section_func" bindtap="toSzmf">
       <image src="../../images/icon-szmf.png"/>
       <text>首诊免费</text>
     </view>
@@ -51,7 +51,7 @@
     </view>
   </view>
   <view class="department-view">
-    <view class="depart-v" wx:for="{{departData}}" data-item="{{item}}" wx:key="{{item.id}}">
+    <view class="depart-v" wx:for="{{departData}}" data-item="{{item}}" wx:key="index">
       <image src="{{item.imageUrl}}"/>
       <text>{{item.name}}</text>
     </view>
@@ -60,7 +60,7 @@
     <text class="title_left">常见病症</text>    
   </view>
   <view class="disease-view">
-    <view class="disease-item" wx:for="{{diseaseData}}" data-item="item" wx:key="{{index}}">
+    <view class="disease-item" wx:for="{{diseaseData}}" data-item="item" wx:key="index">
       <text>{{item.name}}</text>
     </view>
   </view>
@@ -71,7 +71,7 @@
       <image src="../../images/icon-arrow-green.png"/>
     </view>
   </view>
-  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="{{item.id}}">
+  <view class="news-view" wx:for="{{newsData}}" data-item="item" wx:key="index">
     <image src="{{item.coverImage}}"/>
     <view class="news-right">
       <text>{{item.title}}</text>

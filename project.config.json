@@ -40,7 +40,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.0.9",
+  "libVersion": "2.10.0",
   "appid": "wx626c92a994eb6d7b",
   "projectname": "wx-patient",
   "debugOptions": {
