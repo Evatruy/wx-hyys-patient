@@ -1,6 +1,38 @@
 <!--pages/find/szmf/index.wxml-->
 <!-- 引入自定义组价。'navbar-data'中navbar是自定义名字，决定了组件中'navbarData'的名字 -->
 <view class="home">    
-  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>    
-  
+  <nav-bar navbar-data='{{nvabarData}}'></nav-bar>  
+</view>
+<view>
+  <view style="display:flex;align-items: center;">
+    <view class='screen'>
+      <view class='screen-name {{hospitalColor?"select-color":""}}' bindtap='hospitalShow'>
+        <text>{{hospitalText}}</text>
+        <image src="/images/icon-down.png" style="width:20rpx;height:10rpx" class="{{hospitalFlag?'iconfontAnimation':''}}"/>
+      </view>    
+    </view>
+    <view style="width:1rpx;height:46rpx;background:#F0F0F0"/>
+    <view class='screen'>
+      <view class='screen-name {{departmentColor?"select-color":""}}' bindtap='departmentShow'>
+        <text>{{departmentText}}</text>
+        <image src="/images/icon-down.png" style="width:20rpx;height:10rpx" class="{{screenFlag?'iconfontAnimation':''}}"/>
+      </view>    
+    </view>
+  </view>
+  <!-- 点击选择医院按钮后展示的下拉框 -->
+  <view class='drop-down-background' hidden='{{!hospitalFlag}}' bindtouchstart='handletouchtart'/>
+  <view class='drop-down-flex'>
+    <view wx:for="{{hospitalDown.hospitalDown}}" wx:key="this" class='drop-down {{hospitalDown.hospital==index?"down-active":""}} {{hospitalFlag?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='hospitalChoice'>
+      <text>{{item}}</text>
+    </view>
+  </view>   
+  <!-- 点击选择科室按钮后展示的下拉框 -->
+  <scroll-view scroll-y class='content-center'>
+  <view class='drop-down-background' hidden='{{!departmentFlag}}' bindtouchstart='handletouchtart'/>
+  <view class='drop-down-flex'>
+    <view wx:for="{{departmentDown.departmentDown}}" wx:key="this" class='drop-down {{departmentDown.department==index?"down-active":""}} {{departmentFlag?"down-show":""}}' data-item='{{item}}' data-index='{{index}}' bindtap='departmentChoice'>
+      <text>{{item}}</text>
+    </view>
+  </view>   
+  </scroll-view>
 </view>

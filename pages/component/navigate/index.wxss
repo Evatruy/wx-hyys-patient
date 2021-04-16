@@ -7,15 +7,14 @@
 }
 
 .nav-back{
-  position: absolute;
-  bottom: 0%;
   padding: 20rpx 30rpx;
+  margin-top: 25px;
 }
 
 .nav-search{
   line-clamp: 50px;
   direction: block;
-  margin-top: 30px;
+  margin-top: -30px;
   margin-left: 90rpx;
   width: 60%;
 }
